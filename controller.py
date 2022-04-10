@@ -1,8 +1,9 @@
+# NB: This script will only work on a Raspberry Pi.
+
 # Import the DHT library for use with the DHT22
 import Adafruit_DHT as dht
 
-# Import the library to use the GPIO pins
-# on the Raspberry Pi
+# Import the library to use the GPIO pins on the Raspberry Pi
 import RPi.GPIO as GPIO
 
 # Import the time library to use the sleep function
