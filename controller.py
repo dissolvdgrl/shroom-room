@@ -16,7 +16,7 @@ GPIO.setwarnings(False)
 DHT = dht.DHT22
 PIN = 4
 
-while True:
+try:
     humidity, temp = dht.read_retry(DHT, PIN)
     
     if humidity is not None and temp is not None:
@@ -47,5 +47,8 @@ while True:
         
     else:
         print("failed to retreive data from the sensor")
+except KeyboardInterrupt:
+    GPIO.cleanup()
+
 
 GPIO.cleanup() # clean up the GPIO pins when the program ends
